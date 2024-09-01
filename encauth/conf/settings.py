@@ -16,7 +16,6 @@ from dotenv import load_dotenv
 
 logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(BASE_DIR / '.env')
@@ -145,3 +144,8 @@ FORM_RENDERER = 'django.forms.renderers.DjangoTemplates'
 
 DEFAULT_EMAIL_ADDRESS = 'no-reply@site.com'
 EMAIL_PORT = 1025
+
+
+# E2E Encryption Tokens
+AES_SECRET_KEY = bytes(os.getenv('AES_SECRET_KEY'), 'utf-8')
+AES_IV = bytes(os.getenv('AES_IV'), 'utf-8')

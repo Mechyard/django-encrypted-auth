@@ -1,3 +1,4 @@
 daphne
 django
 django-encrypted-model-fields
+pycryptodome 

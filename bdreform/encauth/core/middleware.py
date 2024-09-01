@@ -102,7 +102,6 @@ class E2EEncryptionMiddleware:
         response.content = ciphertext_b64
         return response
 
-
     def __init__(self, response_func):
         self.response_func = response_func
 
